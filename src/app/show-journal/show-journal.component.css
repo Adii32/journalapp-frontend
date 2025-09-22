@@ -1,50 +1,81 @@
-.journal_list
-{
-  margin-top : 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap : 30px;
- 
-}
-.journal_item{
-  border : 1px solid gray;
-padding: 10px;
-/* margin : 10px; */
-box-sizing: border-box;
-width : 220px;
-  background: rgba(255, 255, 255, 0.25); 
-;}
-
 .top-action-bar {
-  position: sticky;
-  top: 0;
   width: 100%;
-  z-index: 99;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 95px;
-  box-shadow: 0 2px 18px rgba(28,58,86,0.13);
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 18px rgba(28,58,86,0.09);
+  padding: 24px 0 20px 0;
+  border-radius: 16px;
+}
+.journal_card {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(28, 58, 86, 0.13);
+  padding: 28px 20px 20px 20px;
+  width: 280px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, background 0.25s;
+  backdrop-filter: blur(2px);
+}
+
+
+.search-input {
+  padding: 14px 22px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px rgba(60,120,240,0.05);
+  background: rgba(255,255,255,0.70);
+  transition: box-shadow 0.2s, background 0.25s;
+  min-width: 270px;
+}
+
+.search-input:focus {
+  box-shadow: 0 4px 18px rgba(33,102,247,0.10);
+  background: #fff;
+}
+
+.search-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #2166f7 0%, #16e0c1 80%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(33,102,247,0.15);
+  cursor: pointer;
+  transition: background 0.17s, color 0.17s, transform 0.14s;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #2166f7 10%, #13ffc1 90%);
+  color: #232b38;
+  transform: translateY(-2px);
 }
 
 .create-journal-btn {
-  width: 700px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 40px;
-  background: linear-gradient(90deg,#2166f7 0%,#16e0c1 80%);
-  color: #fff;
+  padding: 12px 38px;
   border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg,#16e0c1 10%,#2166f7 90%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(33,102,247,0.09);
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
-  transition: background 0.17s, transform 0.17s;
+  transition: background 0.17s, color 0.17s, transform 0.14s;
 }
 
 .create-journal-btn:hover {
-  background: linear-gradient(90deg,#5fa4ff 0%,#13ffc1 80%);
+  background: linear-gradient(90deg,#2166f7 10%, #16e0c1 90%);
   color: #232b38;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }

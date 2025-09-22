@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JournalEntry } from './journal-entry';
 import { Observable } from 'rxjs';
@@ -50,6 +50,12 @@ this.baseUrl = ` http://localhost:8080/journal/id/${id}`
 return this.http.delete<void>(this.baseUrl,{headers})
 
 }
-
-
+  searchByKeyword(keyword: string): Observable<any[]> {
+      const token = localStorage.getItem('jwtToken')
+    const headers = new HttpHeaders({
+      Authorization : `Bearer ${token}`
+    })
+    const params = new HttpParams().set('keyword', keyword);
+    return this.http.get<any[]>(`${this.baseUrl}/search`, { headers,params});
+  }
 }

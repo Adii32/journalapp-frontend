@@ -1,9 +1,21 @@
 <div class="top-action-bar">
-  <button class="create-journal-btn" (click)="createJournal()">Create New Journal</button>
+  <input
+    type="text"
+    placeholder="Search journals..."
+    [(ngModel)]="searchKeyword"
+    class="search-input"
+  />
+  <button (click)="onSearch()" class="search-btn">Search</button>
+  <button (click)="createJournal()" class="create-journal-btn">
+    Create Journal
+  </button>
 </div>
+
+<h1 class="text-danger-200 text-center">{{ noData }}</h1>
+
 <div class="journal_list">
-  <div class="journal_item" *ngFor="let journal of journalEntry">
-    <h1>{{journal.title}}</h1>
-    <button type="button" class="btn btn-primary" (click)="details(journal.id)">Show More</button>
-  </div>
+  <div class="journal_card" *ngFor="let journal of journalEntry">
+    <div class="journal_title">{{ journal.title }}</div>
+ <button type="button" class="btn btn-primary" (click)="details(journal.id)">Show More</button>
+  </div>
 </div>
