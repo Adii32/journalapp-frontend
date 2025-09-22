@@ -1,0 +1,9 @@
+<div class="top-action-bar">
+  <button class="create-journal-btn" (click)="createJournal()">Create New Journal</button>
+</div>
+<div class="journal_list">
+  <div class="journal_item" *ngFor="let journal of journalEntry">
+    <h1>{{journal.title}}</h1>
+    <button type="button" class="btn btn-primary" (click)="details(journal.id)">Show More</button>
+  </div>
+</div>

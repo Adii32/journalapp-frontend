@@ -1,0 +1,28 @@
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+span{
+  color : blueviolet;
+  
+}
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+button{
+background-color: blueviolet;
+  width: 400px;
+  height: 30px;
+  color : white;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgb(25, 25, 26), #83fd7f);
+
+}
+a{
+  text-decoration: none;
+  color : white;
+}

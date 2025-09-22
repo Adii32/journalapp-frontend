@@ -1,0 +1,11 @@
+<div class="journal_list" >
+<h1>{{journalEntry.title}}</h1>
+<img [src]="journalEntry.img" alt="">
+<h2>{{journalEntry.content}}</h2>
+<h4>{{journalEntry.sentiments}}</h4>
+<h6>{{journalEntry.category}}</h6>
+<h6 class="text-dark">created on {{ journalEntry.date }}</h6>
+
+<button class="btn btn-primary" (click)="updateJournal(journalEntry.id)">update</button>
+<button class="btn btn-danger" (click)="deleteJournal(journalEntry.id)">delete</button>
+</div>

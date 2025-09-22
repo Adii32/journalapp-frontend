@@ -1,0 +1,42 @@
+<<div class="form">
+  <div class="journal-card">
+    <h1>Update Journal</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Enter title" [(ngModel)]="journalEntry.title" class="form-control" autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea id="content" name="content" placeholder="Enter content" [(ngModel)]="journalEntry.content" class="form-control"></textarea>
+      </div>
+
+      <div class="form-group-inline">
+        <div>
+          <label for="category">Category</label>
+          <select [(ngModel)]="journalEntry.category" name="category" required>
+            <option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="sentiments">Sentiments</label>
+          <select [(ngModel)]="journalEntry.sentiments" name="sentiments" required>
+            <option *ngFor="let s of sentiments" [value]="s">{{ s }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group-inline">
+        <label class="favorite-checkbox">
+          <input type="checkbox" [(ngModel)]="journalEntry.favorite" name="favorite" />
+          <span>Favorite</span>
+        </label>
+        <input type="file" id="profilePic" name="profilePic" class="file-input" accept="image/*" (change)="selectedFileInput($event)" [(ngModel)]="journalEntry.img">
+      </div>
+
+      <button type="submit" class="modern-btn">Update</button>
+    </form>
+  </div>
+</div>
+

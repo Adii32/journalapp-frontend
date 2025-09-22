@@ -1,0 +1,80 @@
+.journal_list {
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+  max-width: 600px; /* Increase from 400px to 600px */
+  margin: 30px auto; /* Center horizontally */
+  padding: 28px 32px;
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-align: center; /* Center the text and inline content */
+}
+
+.journal_list img {
+  display: block;
+  width: 50%;
+  max-width: 200px;
+  height: 250px;
+  margin: 24px auto 22px auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.journal_list h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #6ef2d3; /* Matching accent */
+  margin-bottom: 12px;
+}
+
+.journal_list h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 12px 0 8px 0;
+  color: #f7fbff;
+}
+
+.journal_list h4 {
+  font-size: 1.08rem;
+  color: #ffe785;
+  margin-bottom: 7px;
+}
+
+.journal_list h6 {
+  font-size: 0.92rem;
+  letter-spacing: 1px;
+  color: #e0caff;
+  margin-bottom: 18px;
+}
+
+.journal_list .btn {
+  padding: 8px 19px;
+  font-size: 1.08rem;
+  border-radius: 9px;
+  margin-right: 14px;
+  margin-top: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.journal_list .btn-primary {
+  background: linear-gradient(88deg,#14a5ff 0%,#32dcce 100%);
+  border: none;
+  color: #fff;
+}
+
+.journal_list .btn-primary:hover {
+  background: linear-gradient(266deg,#32dcce 0%,#14a5ff 100%);
+  color: #fff;
+}
+
+.journal_list .btn-danger {
+  background: linear-gradient(88deg,#fc5151 0%,#f95c80 100%);
+  border: none;
+  color: #fff;
+}
+
+.journal_list .btn-danger:hover {
+  background: linear-gradient(266deg,#f95c80 0%,#fc5151 100%);
+  color: #fff;
+}

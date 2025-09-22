@@ -1,1 +1,9 @@
+body {
+
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #181819, #0fc7f5);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
 /* You can add global styles to this file, and also import other style files */

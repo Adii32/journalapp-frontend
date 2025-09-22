@@ -1,0 +1,30 @@
+<nav class="nav-bar">
+  <div class="brand">
+    <h1>Journal App</h1>
+  </div>
+  <ul>
+   
+
+    <ng-container *ngIf="!login()">
+      <li>
+        <a routerLink="register" routerLinkActive="active-link">Register</a>
+      </li>
+      <li>
+        <a routerLink="login" routerLinkActive="active-link">Login</a>
+      </li>
+    </ng-container>
+
+    <ng-container *ngIf="login()">
+       <li>
+      <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    </li>
+      <li>
+
+        <a (click)="showJournals()" routerLinkActive="active-link">Show Journals</a>
+      </li>
+      <li>
+        <a (click)="logout()">Logout</a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

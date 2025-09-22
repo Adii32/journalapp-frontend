@@ -1,0 +1,110 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  /* background: linear-gradient(120deg, #0f2027 0%, #2c5364 100%); */
+}
+
+.journal-card {
+  width: 430px;
+  padding: 38px 32px;
+  background: rgba(255, 255, 255, 0.25); /* Transparent white */
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(44,83,100,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  backdrop-filter: blur(12px); /* Glassmorphism effect */
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+h1 {
+  color: white ;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.form-group,
+.form-group-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group-inline {
+  flex-direction: row;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  font-size: 1em;
+  color:white;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+input[type="text"],
+select,
+textarea {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.55);
+  color: #333;
+  transition: box-shadow 0.22s, background 0.25s;
+  box-shadow: 0 2px 8px rgba(128,72,255,0.06);
+  outline: none;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  background: rgba(230,202,255,0.7);
+  box-shadow: 0 0 0 2px #8349ff33;
+}
+
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  margin-top: 5px;
+  background: none;
+  border: none;
+  color: #8349ff;
+}
+
+.favorite-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #8349ff;
+}
+
+.modern-btn {
+  margin-top: 22px;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 1.09rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #8349ff 70%, #58b4fc 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(132,73,255,0.14);
+  transition: background 0.17s, transform 0.1s;
+}
+
+.modern-btn:hover {
+  background: linear-gradient(97deg, #6846d3 65%, #34c9fa 100%);
+  transform: scale(1.025);
+}

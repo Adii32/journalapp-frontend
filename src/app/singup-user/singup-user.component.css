@@ -1,0 +1,54 @@
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+margin-top: 20px;
+
+}
+.form h1{
+  text-align: center;
+  color: blueviolet;
+}
+.signup{
+  display: inline-flex;
+  flex-direction: column;
+  background-color: #f3e8ff;   /* हल्का purple shade */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+label{
+  color :blueviolet;
+}
+input{
+height: 30px;
+width: 700px;
+border-radius: 10px;
+border: 2px solid rgb(18, 18, 163);
+text-align: center;
+
+}
+.file{
+  border: none;
+}
+button{
+
+  background-color: blueviolet;
+  color : white;
+  width: 700px;
+height: 40px;
+border-radius: 10px;
+border: none;
+ /* margin-left: 100px; */
+}
+a{
+text-decoration: none;
+color: blueviolet;  
+display: flex;
+text-align: center;
+justify-content: center;
+font-size: 40px;
+
+}
+

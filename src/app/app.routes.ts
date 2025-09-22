@@ -1,3 +1,20 @@
 import { Routes } from '@angular/router';
+import { SingupUserComponent } from './singup-user/singup-user.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { CreateJournalComponent } from './create-journal/create-journal.component';
+import { authGuard } from './auth.guard';
+import { ShowJournalComponent } from './show-journal/show-journal.component';
+import { JournalDetailsComponent } from './journal-details/journal-details.component';
+import { UpdateJournalComponent } from './update-journal/update-journal.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {path : 'register' , component : SingupUserComponent},
+  {path : '',component : HomeComponent,canActivate : [authGuard] },
+  {path : 'login', component : LoginComponent},
+  {path : 'create-journal',component : CreateJournalComponent, canActivate : [authGuard]},
+  {path : 'show-journal',component : ShowJournalComponent,canActivate : [authGuard]},
+  {path : 'journal-details/:id' , component : JournalDetailsComponent,canActivate : [authGuard]},
+  {path : 'update-journal/:id',component : UpdateJournalComponent,canActivate : [authGuard]}
+
+];
