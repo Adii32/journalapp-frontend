@@ -1,7 +1,8 @@
-import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './user';
+import { text } from 'stream/consumers';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,17 @@ loginUser(userName : String , password : String) : Observable<String>{
   })
   this.baseUrl = "http://localhost:8080/user/getUser"
     return this.http.get<any>(this.baseUrl,{ headers });
+  }
+  
+  sendResetToken(email : string) : Observable<any> {
+    const params = new HttpParams().set('email',email);
+    this.baseUrl = "http://localhost:8080/auth/forgot-password"
+    return this.http.post(this.baseUrl,null,{params,responseType : 'text'})
+
+  }
+  resetToken(token : string,newPassword : string) : Observable<any> {
+      this.baseUrl = "http://localhost:8080/auth/reset-password"
+    const params = new HttpParams().set('token',token).set('newPassword',newPassword)
+    return this.http.post(this.baseUrl,null,{params,responseType : 'text'})
   }
 } 

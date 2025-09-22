@@ -30,4 +30,7 @@ onSubmit(){
 register(){
   this.route.navigate(['/register'])
 }
+forgotForm(){
+  this.route.navigate(['/forgot-password'])
+}
 }

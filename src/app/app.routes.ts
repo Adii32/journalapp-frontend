@@ -7,6 +7,8 @@ import { authGuard } from './auth.guard';
 import { ShowJournalComponent } from './show-journal/show-journal.component';
 import { JournalDetailsComponent } from './journal-details/journal-details.component';
 import { UpdateJournalComponent } from './update-journal/update-journal.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 export const routes: Routes = [
   {path : 'register' , component : SingupUserComponent},
@@ -15,6 +17,8 @@ export const routes: Routes = [
   {path : 'create-journal',component : CreateJournalComponent, canActivate : [authGuard]},
   {path : 'show-journal',component : ShowJournalComponent,canActivate : [authGuard]},
   {path : 'journal-details/:id' , component : JournalDetailsComponent,canActivate : [authGuard]},
-  {path : 'update-journal/:id',component : UpdateJournalComponent,canActivate : [authGuard]}
+  {path : 'update-journal/:id',component : UpdateJournalComponent,canActivate : [authGuard]},
+  {path : 'forgot-password' , component : ForgotPasswordComponent},
+  {path : 'reset-password',component : ResetPasswordComponent}
 
 ];
