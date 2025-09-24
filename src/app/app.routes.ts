@@ -9,6 +9,7 @@ import { JournalDetailsComponent } from './journal-details/journal-details.compo
 import { UpdateJournalComponent } from './update-journal/update-journal.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { JournalLikesComponent } from './journal-likes/journal-likes.component';
 
 export const routes: Routes = [
   {path : 'register' , component : SingupUserComponent},
@@ -19,6 +20,7 @@ export const routes: Routes = [
   {path : 'journal-details/:id' , component : JournalDetailsComponent,canActivate : [authGuard]},
   {path : 'update-journal/:id',component : UpdateJournalComponent,canActivate : [authGuard]},
   {path : 'forgot-password' , component : ForgotPasswordComponent},
-  {path : 'reset-password',component : ResetPasswordComponent}
+  {path : 'reset-password',component : ResetPasswordComponent},
+  {path : 'journalLikes/:id',component : JournalLikesComponent ,canActivate : [authGuard]}
 
 ];

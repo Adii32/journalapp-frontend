@@ -1,0 +1,5 @@
+<div *ngFor="let users of likeDTO" class="like-item">
+  <img [src]="users.profilePic" alt="{{users.userName}}" class="user-img" />
+  <span class="user-name">{{users.userName}}</span>
+  <span class="like-date">liked on: {{users.likedAt | date:'medium'}}</span>
+</div>

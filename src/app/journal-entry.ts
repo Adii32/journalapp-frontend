@@ -6,7 +6,7 @@ export class JournalEntry {
   id : number =0;
   title: string = '';
   content: string = '';
-  date: string = new Date().toISOString(); // Default to current date string
+  date ? : Date; // Default to current date string
   img: string = '';
   cloudinaryPublicId: string = '';
   favorite: boolean = false;
