@@ -1,7 +1,7 @@
 import { JournalEntry } from "./journal-entry";
 
 export class User {
-  user_id?: number;               // Optional property with ?
+  userId : number=0;               // Optional property with ?
   userName: string = '';
   email: string = '';
   sentimentAnalysis: boolean = false;

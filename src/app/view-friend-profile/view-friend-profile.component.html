@@ -1,0 +1,39 @@
+<div class="profile-container">
+
+  <!-- User Info Section -->
+  <div class="profile-header">
+    <img [src]="user.profilePic" alt="{{user.userName}}" class="profile-pic" />
+    <div class="user-info">
+      <h2 class="user-name">{{user.userName}}</h2>
+      <p class="user-email">email : {{user.email}}</p>
+      <p class="text-success">friends</p>
+    </div>
+  </div>
+
+  <!-- User Journal Posts Section -->
+  <div class="journal-posts">
+    <h3>Journals </h3>
+    <div *ngIf="jornalEntry.length === 0" class="no-posts">No posts yet</div>
+    <div class="post-list">
+      <div *ngFor="let post of jornalEntry" class="post-card">
+        <img *ngIf="post.img" [src]="post.img" alt="{{post.title}}" class="post-img" />
+        <div class="post-content">
+          <h4 class="post-title">{{post.title}}</h4>
+          <p class="post-date">{{post.date | date: 'mediumDate'}}</p>
+          <p class="post-category">Category: {{post.category}}</p>
+          <p class="post-sentiments">Mood: {{post.sentiments}}</p>
+          <p class="post-text">{{post.content}}</p>
+          <h6 class="post-text">created on {{ post.date}}</h6>
+<a [routerLink]="['/journalLikes',post.id]" class="post-text">
+  total likes {{likesMap[post.id] || 0}}
+</a>
+
+<p class="text-white-50">{{unlikedMsg}}</p><p class="text-white-50">{{likedMsg}}</p>
+          <button class="btn  btn-info" (click)="doLike(post.id)">like <i class="bi bi-hand-thumbs-up"></i></button>
+<button class="btn ms-3 btn-danger" (click)="unLike(post.id)">dislike  <i class="bi bi-hand-thumbs-down"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

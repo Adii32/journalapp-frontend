@@ -1,0 +1,136 @@
+.like-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 22px 44px 22px 28px;
+  background: rgba(25,46,65, 0.41);
+  border-radius: 18px;
+  border: 1.5px solid rgba(0, 197, 252, 0.10);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  margin: 30px 12px 0 12px;
+  backdrop-filter: blur(6px);
+  transition: box-shadow 0.3s;
+}
+
+.user-img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #21c6f6;
+  box-shadow: 0 2px 16px #1f8cf1a1;
+  background: #192e41;
+  margin-right: 18px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 11px;
+}
+
+.user-id {
+  color: #90caf9;
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.04rem;
+}
+
+.user-name {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.34rem;
+  margin: 0;
+  text-shadow: 0 2px 5px #1476bc70;
+}
+
+.like-date {
+  color: #a7ecfb;
+  font-size: 1.06rem;
+  font-style: italic;
+  margin: 0;
+  text-shadow: 0 1.8px 4px #11455F55;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  min-width: 140px;
+}
+
+.text-success {
+  color: #4bf593 !important;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1.06rem;
+  text-shadow: 0 2px 6px #07303b50;
+  margin: 0;
+}
+
+.btn-info {
+  background: #1ad6ff !important;
+  border: none;
+  font-weight: 600;
+  padding: 6px 30px;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  box-shadow: 0 1.8px 6px #1476bc38;
+  transition: background 0.2s;
+}
+
+.btn-info:hover {
+  background: #118dbb !important;
+}
+
+@media (max-width: 700px) {
+  .like-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 14px 7px;
+  }
+  .user-info, .user-actions {
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+.like-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 36px 18px 22px;
+  margin: 24px 10px 10px 10px;
+  background: rgba(15, 34, 63, 0.68);
+  border-radius: 14px;
+  box-shadow: 0 3px 16px 0 rgba(24, 187, 255, 0.13);
+  border: 1.5px solid rgba(27, 138, 215, 0.13);
+  backdrop-filter: blur(5px);
+  transition: box-shadow 0.3s;
+}
+
+/* New container for email and friends */
+.email-friends-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  gap: 6px;
+}
+
+/* Align friends tag to right within the column */
+.text-success {
+  align-self: flex-end;
+  color: #3ff573 !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 6px #76ffb640;
+  margin: 0;
+}

@@ -1,0 +1,109 @@
+.profile-container {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 25px;
+  background: rgba(25, 46, 65, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+  color: #eaeaea;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #21c6f6;
+  object-fit: cover;
+  box-shadow: 0 3px 15px #20a9f7aa;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 900;
+  font-size: 2.4rem;
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.user-email {
+  font-style: italic;
+  color: #88caff;
+  font-size: 1rem;
+  margin: 0 0 14px 0;
+}
+
+.text-success {
+  color: #4bf593;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.journal-posts h3 {
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  color: #aaddff;
+}
+
+.no-posts {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.post-card {
+  background: #1b2d4bcc;
+  border-radius: 18px;
+  padding: 18px 22px;
+  box-shadow: 0 4px 12px #0f1a2caa;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #d5e6ff;
+}
+
+.post-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 16px #145e96bb;
+}
+
+.post-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.post-date, .post-category, .post-sentiments {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #91b7d2;
+  margin: 3px 0;
+}
+
+.post-text {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #dbe9ffcc;
+  margin: 10px 0 0 0;
+}

@@ -13,7 +13,5 @@ export class JournalEntry {
   category: Category | null = null;
   sentiments: Sentiments | null = null;
 
-  constructor(init?: Partial<JournalEntry>) {
-    Object.assign(this, init);
-  }
+
 }

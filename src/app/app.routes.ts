@@ -10,6 +10,10 @@ import { UpdateJournalComponent } from './update-journal/update-journal.componen
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { JournalLikesComponent } from './journal-likes/journal-likes.component';
+import { GetAllUsersComponent } from './get-all-users/get-all-users.component';
+import { PendingRequestComponent } from './pending-request/pending-request.component';
+import { GetAllFriendsComponent } from './get-all-friends/get-all-friends.component';
+import { ViewFriendProfileComponent } from './view-friend-profile/view-friend-profile.component';
 
 export const routes: Routes = [
   {path : 'register' , component : SingupUserComponent},
@@ -21,6 +25,9 @@ export const routes: Routes = [
   {path : 'update-journal/:id',component : UpdateJournalComponent,canActivate : [authGuard]},
   {path : 'forgot-password' , component : ForgotPasswordComponent},
   {path : 'reset-password',component : ResetPasswordComponent},
-  {path : 'journalLikes/:id',component : JournalLikesComponent ,canActivate : [authGuard]}
-
+  {path : 'journalLikes/:id',component : JournalLikesComponent ,canActivate : [authGuard]},
+{path : 'getAllUsers', component : GetAllUsersComponent,canActivate : [authGuard]},
+{path : 'pendingRequest',component : PendingRequestComponent,canActivate : [authGuard]},
+{path : 'getAllFriends',component : GetAllFriendsComponent,canActivate : [authGuard]},
+{path : 'viewFriendPofile/:id',component : ViewFriendProfileComponent,canActivate : [authGuard]}
 ];

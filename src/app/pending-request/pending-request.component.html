@@ -1,0 +1,11 @@
+<div *ngFor="let frnd of frndRequest" class="like-item">
+  <img [src]="frnd.sender?.profilePic" alt="{{frnd.sender?.userName}}" class="user-img" />
+
+  <span class="user-name">{{frnd.sender?.userName}}</span>
+  <span class="like-date">email : {{frnd.sender?.email}}</span>
+  <button class="btn btn-info" (click)="acceptFriend(frnd.id)">accept</button>
+  <button class="btn btn-danger" (click)="rejectFriend(frnd.id)">reject</button>
+
+</div>
+
+

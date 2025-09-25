@@ -1,0 +1,9 @@
+<div *ngFor="let users of user" class="like-item">
+  <img [src]="users.profilePic" alt="{{users.userName}}" class="user-img" />
+   <p > id:  {{users.userId}}</p>
+  <span class="user-name">{{users.userName}}</span>
+  <span class="like-date">email : {{users.email}}</span>
+  <button class="btn btn-info" (click)="addFriend(users.userId)">add friend</button>
+
+</div>
+
