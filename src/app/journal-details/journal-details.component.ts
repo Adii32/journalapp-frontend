@@ -29,6 +29,7 @@ console.log(this.id)
 this.journalService.getJournalById(this.id).subscribe({
   next : (data) =>{
     this.journalEntry = data
+    console.log('data : ',data)
   },
   error : (error) => {
     alert("error while getting journal")

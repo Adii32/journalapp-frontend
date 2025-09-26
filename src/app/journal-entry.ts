@@ -1,17 +1,19 @@
 export type Category = 'TRAIVEL' |'FOOD'|'MOOD'|'	KNOWLEDGE'|'SKILL'|'TECHNOLOGY';
-export type Sentiments = 'HAPPY' | 'SAD' | 'ANGRY' | 'ANXIOUS' ;
+
 
 
 export class JournalEntry {
   id : number =0;
   title: string = '';
   content: string = '';
-  date ? : Date; // Default to current date string
+  date ? : Date;
   img: string = '';
   cloudinaryPublicId: string = '';
   favorite: boolean = false;
   category: Category | null = null;
-  sentiments: Sentiments | null = null;
+  
+sentimentLabel  : string = '';
+  sentimentScore : number = 0;
 
 
 }

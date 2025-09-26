@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Category, JournalEntry, Sentiments } from '../journal-entry';
+import { Category, JournalEntry} from '../journal-entry';
 import { FormsModule } from '@angular/forms';
 
 import { JournalEntryService } from '../journal-entry.service';
@@ -17,7 +17,7 @@ export class CreateJournalComponent {
   selectedFile: File | null = null;
 
   categories: Category[] = ['TRAIVEL', 'FOOD', 'MOOD', 'SKILL', 'TECHNOLOGY'];
-  sentiments: Sentiments[] = ['HAPPY', 'SAD', 'ANGRY', 'ANXIOUS'];
+
 
   constructor(private journalService: JournalEntryService) {}
 
@@ -27,35 +27,29 @@ export class CreateJournalComponent {
       this.selectedFile = ele.files[0];
     }
   }
+onSubmit() {
+  const journalForm = new FormData();
 
-  onSubmit() {
-    const journalForm = new FormData();
+  journalForm.append('title', this.journal.title);
+  journalForm.append('content', this.journal.content);
+  journalForm.append('category', this.journal.category ?? '');
+  journalForm.append('favorite', String(this.journal.favorite));
 
-    // Append normal fields
-    journalForm.append('title', this.journal.title);
-    journalForm.append('content', this.journal.content);
-    journalForm.append('category', this.journal.category ?? '');
-    journalForm.append('sentiments', this.journal.sentiments ?? '');
-    journalForm.append('favorite', String(this.journal.favorite));
-
-
-    // Append file if selected
-    if (this.selectedFile) {
-      journalForm.append('imageFile', this.selectedFile);
-    }
-
-    // Call service
-    this.journalService.createJournal(journalForm).subscribe({
-      next: (res) => {
-        console.log('Journal saved ✅', res);
-        alert('Journal Saved!');
-        this.journal = new JournalEntry();
-        this.selectedFile = null;
-      },
-      error: (err) => {
-        console.error('Error saving journal ❌', err);
-        alert('Something went wrong!');
-      }
-    });
+  if (this.selectedFile) {
+    journalForm.append('imageFile', this.selectedFile);
   }
+
+  this.journalService.createJournal(journalForm).subscribe({
+    next: (res: JournalEntry) => {
+      console.log('Journal saved ✅', res);
+     
+      this.journal = res; // 👈 Reset with response (contains sentiment)
+      this.selectedFile = null;
+    },
+    error: (err) => {
+      console.error('Error saving journal ❌', err);
+      alert('Something went wrong!');
+    }
+  });
+}
 }

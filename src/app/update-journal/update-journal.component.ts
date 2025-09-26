@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Category, JournalEntry, Sentiments } from '../journal-entry';
+import { Category, JournalEntry } from '../journal-entry';
 import { JournalEntryService } from '../journal-entry.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -20,14 +20,12 @@ journalEntry: any = {
   img: '',
   favorite: false,
   category: null,
-  sentiments: null,
-
   date: '',
 
 };
 selectedFile ? : File;
   categories: Category[] = ['TRAIVEL', 'FOOD', 'MOOD', 'SKILL', 'TECHNOLOGY'];
-  sentiments: Sentiments[] = ['HAPPY', 'SAD', 'ANGRY', 'ANXIOUS'];
+ 
 
   constructor(private journalService : JournalEntryService,private route
     : Router, private activeRoute : ActivatedRoute
@@ -62,7 +60,6 @@ const journalForm = new FormData();
 journalForm.append('title',this.journalEntry.title)
 journalForm.append('content',this.journalEntry.content)
 journalForm.append('categories',this.journalEntry.categories ?? '')
-journalForm.append('sentiments',this.journalEntry.sentiments ?? '')
 journalForm.append('favorite',this.journalEntry.favorite)
 if(this.selectedFile){
   journalForm.append('imageFile',this.selectedFile)

@@ -21,7 +21,7 @@
           <h4 class="post-title">{{post.title}}</h4>
           <p class="post-date">{{post.date | date: 'mediumDate'}}</p>
           <p class="post-category">Category: {{post.category}}</p>
-          <p class="post-sentiments">Mood: {{post.sentiments}}</p>
+          <p class="post-sentiments">Mood: {{post.sentimentLabel}}</p>
           <p class="post-text">{{post.content}}</p>
           <h6 class="post-text">created on {{ post.date}}</h6>
 <a [routerLink]="['/journalLikes',post.id]" class="post-text">

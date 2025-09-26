@@ -2,7 +2,7 @@
 <h1>{{journalEntry.title}}</h1>
 <img [src]="journalEntry.img" alt="">
 <h2>{{journalEntry.content}}</h2>
-<h4>{{journalEntry.sentiments}}</h4>
+<h4>label : {{journalEntry.sentimentLabel}}</h4>
 <h6>{{journalEntry.category}}</h6>
 <h6 class="text-dark">created on {{ journalEntry.date}}</h6>
 <a [routerLink]="['/journalLikes',journalEntry.id]" class="text-dark"> total likes {{likes}} </a><br>
